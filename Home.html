@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+     function submit_form()
+	 {
+	     var pass = document.getElementById('password').value;
+		 var confirm_pass = document.getElementById('confirm_password').value;
+		 
+		 if(pass == confirm_pass)
+		 {
+		      document.register_form.submit();
+		 }
+	else{
+	         
+			 alert ("password do not match");
+	}
+ }
+	</script>
+	</head>
+	
+<body>
+<form name = "register_form"  method="POST" action="registerform.php">
+
+<h1><center> User Registration </center></h1>
+<center>
+First Name&nbsp <input type = "text" name = "first_name" value ="" size = "20" maxlength = "25" placeholder= "Enter First Name" /></center>
+<br>
+<center>Last Name&nbsp  <input type = "text" name = "last_name" value ="" size = "20" maxlength = "25" placeholder ="Enter Last Name" /></center>
+<br>
+<center>User Name &nbsp <input type = "text" name = "user_name" value = "" size = "20" maxlength = "25" placeholder= "Enter User Name" />
+</center>
+<br>
+<center>
+Password &nbsp <input id = "password" type = "password" name = "password" value = "" size = "20" maxlength = "25" placeholder= "Enter a Password" /></center>
+<br>
+<center>Confirm Password &nbsp <input id = "confirm_password" type = "password" name = "confirm-password" value = "" size = "20" maxlength = "25" placeholder= "Enter a confirm" /></center>
+<br>
+<br>
+<center><input type = "button" name = "register" value = "register" onclick = submit_form() />&nbsp;&nbsp;&nbsp <input type = "reset" name= "reset" value="reset" />
+</center>
+</form>
+</body>
+</html>
